@@ -1,0 +1,37 @@
+
+h1{
+    color: rgb(13, 188, 71);
+}
+
+body{
+    background-image: linear-gradient(lightgreen,darkgreen);
+}
+ul{
+    color: darkgreen;
+}
+ol, p{
+    color: darkgreen;
+}
+li {
+    list-style-type: none;
+}
+
+.special{
+    color: darkviolet;
+}
+
+li em{
+    font-size: 18px
+}
+
+h1{
+    text-align: center ;
+}
+
+h1 + ol{
+    text-align: center;
+}
+
+a:link{
+    color: lightgreen;
+}
