@@ -12,6 +12,7 @@
     </h6>
     </Ul>
 <head>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css"/> 
     <link rel="icon" href="slicicke.jpg"/>
     <meta charset = "utf-8"/>
@@ -48,5 +49,15 @@ Pickle Catalogue
 </figure>
 <P class="editor's note"> <h3>long Pickles;</h3></P>
 <img src="sigmickle.jpg" width="771" height="123" />
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A2VJnjVe7NE?si=iP2PNLHhIua-3O48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div id="game-container">
+    <h1>Pickle Guesser!</h1>
+    <p>Guess a number between 1 - 100</p>
+    <input type="number" id="guess-input" min="1" max="100">
+    <button onclick="makeguess()">Guess</button>
+    <p id="message"></p>
+</div>
+
 </body>
 </html>
