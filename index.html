@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-
-<html lang="en-US">
-    <Ul>
-        <a href="https://www.google.com/search?q=pickles+factory&sca_esv=762b243e168af4eb&sca_upv=1&rlz=1C1CHBD_enUS1103US1103&udm=2&biw=1536&bih=730&sxsrf=ADLYWIIxnl7Y2mndXgAQ3CmHg_9KJr_p-A%3A1722350062179&ei=7vmoZpfPCq7Dp84PuJPOuQo&ved=0ahUKEwiX_on9_c6HAxWu4ckDHbiJM6cQ4dUDCBE&uact=5&oq=pickles+factory&gs_lp=Egxnd3Mtd2l6LXNlcnAiD3BpY2tsZXMgZmFjdG9yeTIFEAAYgAQyBxAAGIAEGBgyBxAAGIAEGBhIvjxQAFieNXADeACQAQCYAT2gAfAEqgECMTG4AQPIAQD4AQGYAg2gAt8EwgIGEAAYBxgewgINEAAYgAQYsQMYQxiKBcICChAAGIAEGEMYigXCAgYQABgFGB7CAgYQABgIGB6YAwCIBgGSBwIxM6AHiyk&sclient=gws-wiz-serp">
-        <h6>
-        <li>Little pickles</li>
-        <li>not little pickles</li>
-        <li><em>big pickles</em></li>
-        <li>not big pickles</li>
-    </a>
-    </h6>
-    </Ul>
+<html lang="en">
 <head>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css"/> 
-    <link rel="icon" href="slicicke.jpg"/>
-    <meta charset = "utf-8"/>
-    <meta name="author" content="PickleMan"/>
-    <meata name="description" content="The best selection of pickles in the known universe."/>
-<title>
-Pickle Catalogue
-</title>
-
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickle Catalogue</title>
+    <style>
+        #materializer-info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>
-<p>The <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">U</a>ltimate Pickle Catalogue;</p>
-</h1>
-<p class="sigma">SO MANY PICKLES! EAT EM! DRINK EM!</p>
-<ol>
-    <h4>
-    <li><em>all the pickles you need</em></li>
-    <li><em>all the pickles you want</em></li>
-    <li class="special"><em>all the pickles you desire</em></li>
-    <article>Best pickles ever</article>
-    <article>so many pickles</article>
-    <artice>Better than your pickles!</artice>
-</h4>
-</ol>
-<br>
-<p> <h3>Juicy pickles;</h3></p>
-<figure>
-<img src = "sigmickle.jpg" width="347" height="347" alt="Chadpickle" />
-<figcaption>
-    <h6>juicy mmm</h6>
-</figcaption>
-</figure>
-<P class="editor's note"> <h3>long Pickles;</h3></P>
-<img src="sigmickle.jpg" width="771" height="123" />
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A2VJnjVe7NE?si=iP2PNLHhIua-3O48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<div id="game-container">
-    <h1>Pickle Guesser!</h1>
-    <p>Guess a number between 1 - 100</p>
-    <input type="number" id="guess-input" min="1" max="100">
-    <button onclick="makeguess()">Guess</button>
-    <p id="message"></p>
-</div>
+    <h1>Pickle Catalogue</h1>
+    <div id="counter">0</div>
 
+    <div id="materializer-info">
+        <button onclick="increaseCounter()">Materialise Pickle</button>
+        <button onclick="resetCounter()">Prestige</button>
+        <br>
+        <button onclick="buyPickleMaterialiser()" id="buy-button">Buy Manual Pickle Materialiser (10 Pickles)</button>
+    </div>
+
+    <script>
+        let Clicks = 1;
+        let count = 0;
+        let materializerCost = 10; // Initial cost of the materializer
+        const counterElement = document.getElementById('counter');
+        const buyButton = document.getElementById('buy-button');
+
+        function buyPickleMaterialiser() {
+            if (count >= materializerCost) {
+                Clicks++;
+                count -= materializerCost;
+                materializerCost = Math.floor(materializerCost * 3.7); // Increase the cost by 50%
+                counterElement.textContent = count;
+                updateButtonText();
+            }
+        }
+
+        function increaseCounter() {
+            count += Clicks; 
+            counterElement.textContent = count; 
+        }
+
+        function resetCounter() {
+            count = 0;
+            counterElement.textContent = count; 
+        }
+
+        function updateButtonText() {
+            buyButton.textContent = `Buy Manual Pickle Materialiser (${materializerCost} Pickles)`;
+        }
+
+        
+        updateButtonText();
+    </script>
 </body>
 </html>

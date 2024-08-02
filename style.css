@@ -1,69 +1,31 @@
-
-h1{
-    color: rgb(13, 188, 71);
-}
-
 body{
-    background-image: linear-gradient(lightgreen,darkgreen);
-}
-ul{
-    color: darkgreen;
-}
-ol, p{
-    color: rgb(100, 233, 100);
-}
-li {
-    list-style-type: none;
+    background-color:green
 }
 
-.special{
-    color: darkviolet;
+H1{
+    color: lightgreen
 }
-
-li em{
-    font-size: 18px
-}
-
 h1{
-    text-align: center ;
-}
-
-h1 + ol{
+    border-style: solid;
+    text-decoration: aliceblue;
     text-align: center;
+    font-family: Impact;
+    border-color:darkgreen;
+    border-radius: 30px;
+    background-color: darkgreen;
+    border-top-color: lightgreen;
+    border-left-color: lightgreen;
+    border-bottom-color: black;
+    border-right-color: black;
 }
 
-a:link{
-    color: rgb(6, 94, 6);
-}
-a:visited{
-color: darkslategrey
-}
-a:hover{
-    color: blue;
+button{
+    
+    
+    background-color: darkgreen;
+    color: lightgreen;
 }
 
-ol, ul, h2,h3,h4,h5,h6{
-    text-align: center;
-}
-.sigma{
-    color: red;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 4px;
-    border: 4px solid darkturquoise;
-    background: turquoise;
-    font-weight: 10px;
-}
-article{
-    flex: 1 200px;
-}
-article:nth-of-type(3){
-    flex: 2 200px;
-}
-
-iframe{
-    justify-content: center;
-}
 img{
-    justify-content: center;
+    background: none;
 }
