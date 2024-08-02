@@ -21,32 +21,39 @@
         <br>
         <button onclick="buyPickleMaterialiser()" id="buy-button">Buy Manual Pickle Materialiser (10 Pickles)</button>
     </div>
-
+    <div id="message"></div>
     <script>
         let Clicks = 1;
         let count = 0;
         let materializerCost = 10; // Initial cost of the materializer
+        let prestigePoints = count * 0.001;
         const counterElement = document.getElementById('counter');
         const buyButton = document.getElementById('buy-button');
-
+        counterElement.style.backgroundColor = 'darkgreen';
+        counterElement.style.color = 'lightgreen';
         function buyPickleMaterialiser() {
             if (count >= materializerCost) {
                 Clicks++;
                 count -= materializerCost;
-                materializerCost = Math.floor(materializerCost * 3.7); // Increase the cost by 50%
-                counterElement.textContent = count;
+                materializerCost = Math.floor(materializerCost * 2.73259); // Increase the cost by 50%
+                counterElement.textContent = `you have ${count} Pickles`;
                 updateButtonText();
             }
         }
 
         function increaseCounter() {
-            count += Clicks; 
-            counterElement.textContent = count; 
+            count += Clicks;  
+
+            
+            prestigePoints = count * 0.001;
+            counterElement.textContent = `you have ${count} Pickles`;
+          
         }
 
         function resetCounter() {
             count = 0;
-            counterElement.textContent = count; 
+            counterElement.textContent = `you have ${count} Pickles`; 
+            prestigePoints = count * 0.001;
         }
 
         function updateButtonText() {
